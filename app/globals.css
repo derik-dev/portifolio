@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #080808;
+  color: #f0f0f0;
+  scroll-behavior: auto;
+}
+
+::selection {
+  background: #3b82f6;
+  color: #fff;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 767px) {
+  /* Horizontal padding for all sections */
+  .res-px {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Projects: 2-col → 1-col */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About: 40/60 → single column */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 48px !important;
   }
 }
