@@ -45,6 +45,7 @@ img { display: block; max-width: 100%; }
 .button-outline { border-color: var(--ink); }
 .hero { position: relative; min-height: 940px; height: 100vh; max-height: 1080px; overflow: hidden; color: white; background: #2a1010; }
 .hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-image { will-change: transform; }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(18,3,4,.92) 0%, rgba(36,9,8,.67) 39%, rgba(23,3,4,.06) 70%), linear-gradient(0deg, rgba(18,3,4,.58), transparent 42%); }
 .hero-content { position: relative; z-index: 2; padding-top: clamp(220px, 25vh, 290px); }
 .availability { display: inline-flex; align-items: center; gap: 9px; padding: 8px 12px; margin-bottom: 29px; border: 1px solid rgba(255,255,255,.24); border-radius: 7px; background: rgba(255,255,255,.08); backdrop-filter: blur(10px); font-size: 11px; }
@@ -77,10 +78,12 @@ img { display: block; max-width: 100%; }
 .showcase-list span { padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.35); font-family: var(--font-syne); font-weight: 700; }
 .showcase-list .active { color: white; }
 .browser-card { align-self: center; overflow: hidden; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; background: #f5f5f5; box-shadow: 0 26px 80px rgba(0,0,0,.38); transform: rotate(.5deg); }
+.browser-card { will-change: transform; }
 .browser-bar { display: flex; align-items: center; gap: 6px; height: 38px; padding: 0 14px; color: #777; background: #f4f4f4; font-size: 9px; }
 .browser-bar i { width: 7px; height: 7px; border-radius: 50%; background: #d1d1d1; }
 .browser-bar span { margin-inline: auto; }
 .browser-card img { width: 100%; aspect-ratio: 16/9; object-fit: cover; object-position: top; }
+.browser-card img { will-change: transform; }
 .projects { padding: 145px 0; }
 .row-heading { display: flex; align-items: flex-end; justify-content: space-between; text-align: left; }
 .row-heading > p { max-width: 410px; margin: 0 0 8px; color: rgba(35,9,6,.62); line-height: 1.65; }
@@ -90,6 +93,7 @@ img { display: block; max-width: 100%; }
 .project-image { position: relative; overflow: hidden; aspect-ratio: 16/10; border-radius: 13px; background: #ddd; }
 .project-featured .project-image { aspect-ratio: 16/7.2; }
 .project-image img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .65s cubic-bezier(.2,.8,.2,1); }
+.project-image img { will-change: transform; }
 .project-card:hover img { transform: scale(1.035); }
 .project-open { position: absolute; right: 18px; top: 18px; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; color: white; background: rgba(15,15,15,.88); opacity: 0; transform: translateY(8px); transition: .3s; }
 .project-card:hover .project-open { opacity: 1; transform: none; }
@@ -131,6 +135,7 @@ img { display: block; max-width: 100%; }
 .faq-list details p { margin: -7px 40px 24px 0; color: rgba(35,9,6,.6); font-size: 13px; line-height: 1.65; }
 .cta-section { position: relative; min-height: 620px; display: grid; place-items: center; overflow: hidden; color: white; text-align: center; }
 .cta-section > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cta-section > img { will-change: transform; }
 .cta-shade { position: absolute; inset: 0; background: rgba(19,4,12,.16); }
 .cta-content { position: relative; z-index: 2; }
 .cta-content h2 { margin: 0 0 35px; font-size: clamp(58px, 7vw, 105px); line-height: .92; letter-spacing: -.07em; }
