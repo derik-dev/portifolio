@@ -68,9 +68,31 @@ img { display: block; max-width: 100%; }
 .intro-heading, .section-heading { text-align: center; }
 .intro h2, .section-heading h2, .about h2, .faq h2 { margin: 0; font-size: clamp(45px, 5vw, 78px); line-height: .98; letter-spacing: -.065em; }
 .intro-heading > p:last-child { max-width: 570px; margin: 24px auto 0; color: rgba(35,9,6,.63); line-height: 1.7; }
-.pill-nav { display: flex; justify-content: center; align-items: center; gap: 4px; width: fit-content; max-width: calc(100% - 32px); margin: 62px auto 25px; padding: 5px; border-radius: 999px; background: white; overflow-x: auto; white-space: nowrap; }
-.pill-nav span { padding: 12px 18px; border-radius: 999px; font-size: 12px; }
-.pill-nav .selected { color: white; background: #191919; }
+.intro-media { margin-top: 62px; }
+.intro-card { width: 100%; max-width: 1320px; margin: 0 auto; transform: none; background: #f8f6f2; color: var(--ink); box-shadow: 0 24px 70px rgba(0,0,0,.08); }
+.intro-card .browser-bar { background: #f1ebe4; color: rgba(35,9,6,.42); height: 38px; }
+.intro-card-inner {
+  display: grid;
+  grid-template-columns: minmax(340px, .9fr) minmax(620px, 1.45fr);
+  gap: 36px;
+  align-items: start;
+  min-height: 690px;
+  padding: 90px 36px 36px;
+}
+.intro-card-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  color: var(--ink);
+  max-width: 420px;
+  padding-top: 36px;
+}
+.intro-card-copy h3 { margin: 0; max-width: 470px; font-size: clamp(40px, 3.4vw, 61px); line-height: .92; letter-spacing: -.07em; }
+.intro-card-copy p { margin: 0; max-width: 360px; color: rgba(35,9,6,.58); font-size: 15px; line-height: 1.75; }
+.intro-card-copy a { margin-top: 8px; padding-bottom: 4px; border-bottom: 1px solid rgba(35,9,6,.45); font-size: 12px; font-weight: 700; }
+.intro-card-shot { width: 100%; padding-top: 2px; }
+.intro-card-shot img { width: 100%; aspect-ratio: 1.53 / 1; object-fit: cover; object-position: center; border-radius: 18px; box-shadow: 0 22px 50px rgba(0,0,0,.16); }
 .showcase { display: grid; grid-template-columns: .85fr 1.65fr; min-height: 610px; padding: 44px; border-radius: 16px; color: white; background: #272220; overflow: hidden; }
 .showcase-copy { display: flex; flex-direction: column; align-items: flex-start; padding: 6px 32px 4px 0; }
 .mini-label { color: rgba(255,255,255,.56); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; }
@@ -172,7 +194,11 @@ footer { padding: 45px 0; background: var(--paper); }
   .hero-bottom span:last-child { display: none; }
   .intro, .projects, .process, .about { padding: 100px 0; }
   .intro h2, .section-heading h2, .about h2, .faq h2 { font-size: 48px; }
-  .pill-nav { justify-content: flex-start; }
+  .intro-media { margin-top: 42px; }
+  .intro-card-inner { grid-template-columns: 1fr; gap: 22px; min-height: 0; padding: 28px 18px 18px; }
+  .intro-card-copy { max-width: none; padding-top: 0; }
+  .intro-card-copy h3 { font-size: 28px; }
+  .intro-card-shot { padding-top: 0; }
   .showcase { width: calc(100% - 24px); padding: 24px; min-height: 0; }
   .showcase h3 { font-size: 25px; }
   .row-heading { gap: 24px; }

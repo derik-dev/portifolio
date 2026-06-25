@@ -137,41 +137,29 @@ export default function Home() {
             entre a ideia e a entrega.
           </p>
         </div>
-        <div className="pill-nav" aria-label="Tipos de projeto" data-pill-nav>
-          <span className="selected">Produtos completos</span>
-          <span>Sites de conversão</span>
-          <span>Sistemas internos</span>
-          <span>IA aplicada</span>
-        </div>
-        <div className="showcase shell" data-showcase>
-          <div className="showcase-copy" data-reveal>
-            <span className="mini-label">Full-cycle product work</span>
-            <h3>
-              Uma experiência coesa,
-              <br />
-              de ponta a ponta.
-            </h3>
-            <p>
-              Eu cuido da direção visual, arquitetura, desenvolvimento e
-              lançamento. Você conversa com uma pessoa e recebe um produto
-              inteiro.
-            </p>
-            <a href="#processo">Conheça o processo <Arrow /></a>
-            <div className="showcase-list">
-              <span className="active">Design de produto</span>
-              <span>Frontend & motion</span>
-              <span>Backend & banco de dados</span>
-              <span>Automações & IA</span>
-            </div>
-          </div>
-          <div className="browser-card" data-showcase-card>
+        <div className="shell intro-media" data-reveal>
+          <div className="browser-card intro-card">
             <div className="browser-bar">
               <i />
               <i />
               <i />
-              <span>derik.dev / selected-work</span>
+              <span>derik.dev / landing page</span>
             </div>
-            <img src="/imagens/ims-sites/img-site (2).png" alt="Projeto Agenda Garantida" />
+            <div className="intro-card-inner">
+              <div className="intro-card-copy">
+                <span className="mini-label">Landing page</span>
+                <h3>Uma experiência coesa, de ponta a ponta.</h3>
+                <p>
+                  Eu cuido da direção visual, arquitetura, desenvolvimento e
+                  lançamento. Você conversa com uma pessoa e recebe um produto
+                  inteiro.
+                </p>
+                <a href="#processo">Take a tour <Arrow /></a>
+              </div>
+              <div className="intro-card-shot">
+                <img src="/imagens/ims-sites/img-site (12).png" alt="Projeto em destaque" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
