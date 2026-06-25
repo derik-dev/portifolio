@@ -1,3 +1,4 @@
+import BrandLogo from "../components/BrandLogo";
 import PageMotion from "../components/PageMotion";
 
 const projects = [
@@ -68,8 +69,7 @@ export default function Home() {
 
       <header className="topbar">
         <a className="brand" href="#inicio" aria-label="Derik Dev, início">
-          <span className="brand-mark">D</span>
-          <span>Derik Dev</span>
+          <BrandLogo />
         </a>
         <nav className="nav-links" aria-label="Navegação principal">
           <a href="#projetos">Projetos</a>
@@ -342,8 +342,7 @@ export default function Home() {
       <footer>
         <div className="shell footer-inner">
           <a className="brand brand-dark" href="#inicio">
-            <span className="brand-mark">D</span>
-            <span>Derik Dev</span>
+            <BrandLogo tone="dark" />
           </a>
           <p>Produto, design e desenvolvimento para a web.</p>
           <div>
