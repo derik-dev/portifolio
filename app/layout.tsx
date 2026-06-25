@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Syne, Inter } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "@/components/SmoothScroll";
 
 const syne = Syne({
   subsets: ["latin"],
@@ -11,14 +10,14 @@ const syne = Syne({
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Derik Dev — Fullstack & AI Builder",
+  title: "Derik Dev — Produtos digitais com presença",
   description:
-    "Desenvolvedor fullstack especializado em produtos SaaS com IA. Next.js, Supabase, Vercel.",
+    "Desenvolvedor fullstack especializado em sites, produtos SaaS e experiências digitais de ponta a ponta.",
 };
 
 export default function RootLayout({
@@ -28,9 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${syne.variable} ${inter.variable} antialiased`}>
-        <SmoothScroll>{children}</SmoothScroll>
-      </body>
+      <body className={`${syne.variable} ${inter.variable}`}>{children}</body>
     </html>
   );
 }
