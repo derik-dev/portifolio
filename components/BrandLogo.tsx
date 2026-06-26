@@ -1,12 +1,10 @@
 type BrandLogoProps = {
   className?: string;
-  compact?: boolean;
   tone?: "light" | "dark";
 };
 
 export default function BrandLogo({
   className = "",
-  compact = false,
   tone = "light",
 }: BrandLogoProps) {
   return (
@@ -19,7 +17,6 @@ export default function BrandLogo({
         data-brand-mark
         data-tone={tone}
       />
-      {!compact && <span className="brand-copy">Derik Dev</span>}
     </span>
   );
 }
