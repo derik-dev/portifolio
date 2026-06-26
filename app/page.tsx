@@ -10,16 +10,22 @@ const projects = [
     className: "project-featured",
   },
   {
-    name: "OrçaFácil",
-    type: "Produto digital",
-    description: "Orçamentos profissionais que vendem pelo cliente.",
-    image: "/imagens/ims-sites/img-site (1).png",
+    name: "CodeXZ",
+    type: "Autoridade digital",
+    description: "Presença premium para marcas que precisam transmitir valor.",
+    image: "/imagens/ims-sites/img-site (10).png",
   },
   {
-    name: "Aura Clinic",
-    type: "Experiência de marca",
-    description: "Biotecnologia e design em uma presença premium.",
-    image: "/imagens/ims-sites/img-site (5).png",
+    name: "NetPubli",
+    type: "Landing page",
+    description: "Estrutura de conversão para tráfego pago e captação.",
+    image: "/imagens/ims-sites/img-site (11).png",
+  },
+  {
+    name: "Centro CPAP",
+    type: "Saúde",
+    description: "Página especializada para jornada de diagnóstico e agendamento.",
+    image: "/imagens/ims-sites/img-site (12).png",
   },
   {
     name: "Rei do Martelete",
@@ -28,16 +34,16 @@ const projects = [
     image: "/imagens/ims-sites/img-site.png",
   },
   {
-    name: "OrçaSolar",
-    type: "Plataforma SaaS",
-    description: "Propostas solares completas em poucos minutos.",
-    image: "/imagens/ims-sites/img-site (7).png",
-  },
-  {
     name: "Imparis Solutions",
     type: "Site institucional",
     description: "Posicionamento digital para escalar negócios.",
     image: "/imagens/ims-sites/img-site (6).png",
+  },
+  {
+    name: "E4D Consultoria",
+    type: "Site institucional",
+    description: "Gestão estratégica para clínicas e hospitais.",
+    image: "/imagens/ims-sites/img-site (14).png",
   },
 ];
 
