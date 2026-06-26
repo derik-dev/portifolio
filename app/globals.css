@@ -447,17 +447,14 @@ footer { padding: 45px 0; background: var(--paper); }
   flex: 0 0 clamp(588px, 48vw, 760px);
   height: 100%;
   margin: 0;
-  padding: 10px;
   overflow: hidden;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #171717, #26201d);
-  box-shadow: 0 30px 65px rgba(0,0,0,.28);
+  border-radius: 18px;
 }
 .suite-site-card img {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  object-fit: contain;
+  border-radius: inherit;
+  object-fit: cover;
   object-position: center;
 }
 .suite-site-card figcaption {
@@ -557,10 +554,8 @@ footer { padding: 45px 0; background: var(--paper); }
   }
   .suite-site-card {
     flex-basis: clamp(350px, 92vw, 480px);
-    padding: 7px;
-    border-radius: 9px;
+    border-radius: 14px;
   }
-  .suite-site-card img { border-radius: 7px; }
   .suite-site-card figcaption {
     left: 14px;
     bottom: 14px;
