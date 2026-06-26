@@ -66,13 +66,11 @@ const suiteCapabilities = [
 ];
 
 const suiteSites = [
+  { name: "CodeXZ", image: "/imagens/ims-sites/img-site (10).png" },
+  { name: "NetPubli", image: "/imagens/ims-sites/img-site (11).png" },
   { name: "Centro CPAP", image: "/imagens/ims-sites/img-site (12).png" },
-  { name: "Agenda Garantida", image: "/imagens/ims-sites/img-site (2).png" },
-  { name: "OrçaFácil", image: "/imagens/ims-sites/img-site (1).png" },
-  { name: "Aura Clinic", image: "/imagens/ims-sites/img-site (5).png" },
-  { name: "Rei do Martelete", image: "/imagens/ims-sites/img-site.png" },
-  { name: "OrçaSolar", image: "/imagens/ims-sites/img-site (7).png" },
   { name: "Imparis Solutions", image: "/imagens/ims-sites/img-site (6).png" },
+  { name: "Vero", image: "/imagens/ims-sites/img-site (13).png" },
 ];
 
 const faqs = [
