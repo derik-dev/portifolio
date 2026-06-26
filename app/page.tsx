@@ -210,9 +210,15 @@ export default function Home() {
         </div>
         <div className="project-grid shell" data-project-grid>
           {projects.map((project) => (
-            <article className={`project-card ${project.className || ""}`} key={project.name} data-project-card>
+            <article className={`project-card ${project.className || ""}`} key={project.name} tabIndex={0} data-project-card>
               <div className="project-image">
                 <img src={project.image} alt={`Página inicial do projeto ${project.name}`} />
+                <div className="project-info" aria-hidden="true">
+                  <span>{project.type}</span>
+                  <h3>{project.name}</h3>
+                  <p>{project.description}</p>
+                  <strong>Mais detalhes</strong>
+                </div>
                 <span className="project-open">
                   <Arrow />
                 </span>
