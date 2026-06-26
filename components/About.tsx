@@ -58,7 +58,7 @@ export default function About() {
         {/* Right column */}
         <div ref={rightRef} style={s.right}>
           <p style={s.paragraph}>
-            Sou Derik, desenvolvedor fullstack de Petrópolis, RJ.
+            Sou Derik, desenvolvedor fullstack de Três Rios, RJ.
             Trabalho na interseção entre produto, design e engenharia —
             construindo sistemas com Next.js, Supabase e IA que realmente entregam resultado.
           </p>

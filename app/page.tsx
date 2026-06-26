@@ -135,7 +135,7 @@ export default function Home() {
           <span>Integrações com IA</span>
         </div>
         <div className="hero-bottom" data-hero-bottom>
-          <span>Petrópolis · RJ · Brasil</span>
+          <span>Três Rios · RJ · Brasil</span>
           <span>Projetando e construindo de ponta a ponta</span>
         </div>
       </section>
