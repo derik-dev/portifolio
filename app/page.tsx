@@ -3,10 +3,10 @@ import PageMotion from "../components/PageMotion";
 
 const projects = [
   {
-    name: "Agenda Garantida",
-    type: "SaaS",
-    description: "Agenda com confirmação automática de pagamentos.",
-    image: "/imagens/ims-sites/img-site (2).png",
+    name: "E4D Consultoria",
+    type: "Site institucional",
+    description: "Gestão estratégica para clínicas e hospitais.",
+    image: "/imagens/ims-sites/img-site (14).png",
     className: "project-featured",
   },
   {
