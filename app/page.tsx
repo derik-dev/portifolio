@@ -7,6 +7,7 @@ const projects = [
     type: "E-commerce",
     description: "Moda funcional com estética premium.",
     image: "/imagens/ims-sites/img-site (13).png",
+    href: "https://loja-virtual-navy-eta.vercel.app/",
     className: "project-featured",
   },
   {
@@ -14,36 +15,42 @@ const projects = [
     type: "Autoridade digital",
     description: "Presença premium para marcas que precisam transmitir valor.",
     image: "/imagens/ims-sites/img-site (10).png",
+    href: "https://codexz.com.br/",
   },
   {
     name: "NetPubli",
     type: "Landing page",
     description: "Estrutura de conversão para tráfego pago e captação.",
     image: "/imagens/ims-sites/img-site (11).png",
+    href: "https://codexz.com.br/netpubli",
   },
   {
     name: "Centro CPAP",
     type: "Saúde",
     description: "Página especializada para jornada de diagnóstico e agendamento.",
     image: "/imagens/ims-sites/img-site (12).png",
+    href: "https://netpubli.com.br/meu-cpap",
   },
   {
     name: "Rei do Martelete",
     type: "E-commerce",
     description: "Catálogo e conversão para locação de equipamentos.",
     image: "/imagens/ims-sites/img-site.png",
+    href: "https://codexz.com.br/template",
   },
   {
     name: "Imparis Solutions",
     type: "Site institucional",
     description: "Posicionamento digital para escalar negócios.",
     image: "/imagens/ims-sites/img-site (6).png",
+    href: "https://codexz.com.br/imparis",
   },
   {
     name: "E4D Consultoria",
     type: "Site institucional",
     description: "Gestão estratégica para clínicas e hospitais.",
     image: "/imagens/ims-sites/img-site (14).png",
+    href: "https://e4dconsultoria.com.br/",
   },
 ];
 
@@ -210,7 +217,16 @@ export default function Home() {
         </div>
         <div className="project-grid shell" data-project-grid>
           {projects.map((project) => (
-            <article className={`project-card ${project.className || ""}`} key={project.name} tabIndex={0} data-project-card>
+            <a
+              className={`project-card ${project.className || ""}`}
+              href={project.href}
+              key={project.name}
+              tabIndex={0}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Abrir site do projeto ${project.name}`}
+              data-project-card
+            >
               <div className="project-image">
                 <img src={project.image} alt={`Página inicial do projeto ${project.name}`} />
                 <div className="project-info" aria-hidden="true">
@@ -230,7 +246,7 @@ export default function Home() {
                 </div>
                 <p>{project.description}</p>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </section>
