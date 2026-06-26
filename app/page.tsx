@@ -3,10 +3,10 @@ import PageMotion from "../components/PageMotion";
 
 const projects = [
   {
-    name: "E4D Consultoria",
-    type: "Site institucional",
-    description: "Gestão estratégica para clínicas e hospitais.",
-    image: "/imagens/ims-sites/img-site (14).png",
+    name: "Vero",
+    type: "E-commerce",
+    description: "Moda funcional com estética premium.",
+    image: "/imagens/ims-sites/img-site (13).png",
     className: "project-featured",
   },
   {
