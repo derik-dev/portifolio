@@ -113,23 +113,6 @@ export default function PageMotion() {
         },
       });
 
-      cards.forEach((card) => {
-        const image = card.querySelector('img');
-        if (!image) return;
-
-        gsap.to(image, {
-          yPercent: 5,
-          scale: 1.08,
-          ease: 'none',
-          scrollTrigger: {
-            trigger: card,
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1,
-          },
-        });
-      });
-
       gsap.from('[data-showcase-card]', {
         y: 36,
         opacity: 0,
