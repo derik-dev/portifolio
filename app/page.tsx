@@ -50,6 +50,31 @@ const capabilities = [
 
 const tools = ["Next.js", "React", "TypeScript", "Supabase", "Node.js", "GSAP", "Vercel", "IA generativa"];
 
+const suiteTabs = [
+  { label: "Landing pages", active: true, badge: "" },
+  { label: "Institucionais", active: false, badge: "Web" },
+  { label: "SaaS", active: false, badge: "Produto" },
+  { label: "E-commerce", active: false, badge: "" },
+];
+
+const suiteCapabilities = [
+  { title: "Estratégia", description: "Objetivo, público e mensagem central definidos antes do layout.", active: true },
+  { title: "Design", description: "Direção visual, hierarquia e experiência alinhadas à marca.", active: false },
+  { title: "Código", description: "Desenvolvimento responsivo, rápido e pronto para escalar.", active: false },
+  { title: "Integrações", description: "Formulários, automações, pagamentos e ferramentas do negócio.", active: false },
+  { title: "Lançamento", description: "Deploy, ajustes finais e base preparada para evoluir.", active: false },
+];
+
+const suiteSites = [
+  { name: "Centro CPAP", image: "/imagens/ims-sites/img-site (12).png" },
+  { name: "Agenda Garantida", image: "/imagens/ims-sites/img-site (2).png" },
+  { name: "OrçaFácil", image: "/imagens/ims-sites/img-site (1).png" },
+  { name: "Aura Clinic", image: "/imagens/ims-sites/img-site (5).png" },
+  { name: "Rei do Martelete", image: "/imagens/ims-sites/img-site.png" },
+  { name: "OrçaSolar", image: "/imagens/ims-sites/img-site (7).png" },
+  { name: "Imparis Solutions", image: "/imagens/ims-sites/img-site (6).png" },
+];
+
 const faqs = [
   ["Que tipo de projeto você desenvolve?", "Landing pages, sites institucionais, e-commerces e produtos SaaS - do design ao deploy."],
   ["Você também cuida do design?", "Sim. A interface e a experiência fazem parte do projeto, com direção visual adaptada ao posicionamento de cada marca."],
@@ -124,40 +149,56 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="intro section-light" data-reveal>
-        <div className="shell intro-heading">
-          <p className="section-kicker">Uma base. Várias possibilidades.</p>
-          <h2>
-            Do primeiro rascunho
-            <br />
-            ao produto no ar.
-          </h2>
-          <p>
-            Estratégia, interface e engenharia trabalhando juntas - sem ruído
-            entre a ideia e a entrega.
-          </p>
+      <section className="intro section-light" data-showcase>
+        <div className="suite-tabs" aria-label="Áreas de atuação" data-pill-nav>
+          {suiteTabs.map((tab) => (
+            <span className={tab.active ? "active" : ""} key={tab.label}>
+              {tab.label}
+              {tab.badge && <b>{tab.badge}</b>}
+            </span>
+          ))}
         </div>
-        <div className="shell intro-media" data-reveal>
-          <div className="browser-card intro-card">
-            <div className="browser-bar">
-              <i />
-              <i />
-              <i />
-              <span>derik.dev / landing page</span>
+
+        <div className="shell intro-suite" data-showcase-card>
+          <div className="suite-copy">
+            <h2>Sites completos, do briefing ao lançamento</h2>
+            <p>
+              Eu transformo a ideia em uma presença digital clara, bonita e
+              funcional: estratégia, interface, desenvolvimento e publicação
+              trabalhando como uma entrega só.
+            </p>
+            <a href="#processo">
+              Ver processo <span aria-hidden="true">→</span>
+            </a>
+
+            <div className="suite-capability-list">
+              {suiteCapabilities.map((item) => (
+                <article className={item.active ? "active" : ""} key={item.title}>
+                  <span aria-hidden="true" />
+                  <div>
+                    <h3>{item.title}</h3>
+                    {item.active && <p>{item.description}</p>}
+                  </div>
+                </article>
+              ))}
             </div>
-            <div className="intro-card-inner">
-              <div className="intro-card-copy">
-                <span className="mini-label">Landing page</span>
-                <h3>Uma experiência coesa, de ponta a ponta.</h3>
-                <p>
-                  Eu cuido da direção visual, arquitetura, desenvolvimento e
-                  lançamento. Você conversa com uma pessoa e recebe um produto
-                  inteiro.
-                </p>
-                <a href="#processo">Take a tour <Arrow /></a>
-              </div>
-              <div className="intro-card-shot">
-                <img src="/imagens/ims-sites/img-site (12).png" alt="Projeto em destaque" />
+          </div>
+
+          <div className="suite-stage" aria-label="Sites desenvolvidos por Derik Dev">
+            <div className="suite-carousel">
+              <div className="suite-track">
+                {suiteSites.map((site) => (
+                  <figure className="suite-site-card" key={site.name}>
+                    <img src={site.image} alt={`Página inicial do projeto ${site.name}`} />
+                    <figcaption>{site.name}</figcaption>
+                  </figure>
+                ))}
+                {suiteSites.map((site) => (
+                  <figure className="suite-site-card" key={`${site.name}-repeat`} aria-hidden="true">
+                    <img src={site.image} alt="" />
+                    <figcaption>{site.name}</figcaption>
+                  </figure>
+                ))}
               </div>
             </div>
           </div>
