@@ -50,13 +50,6 @@ const capabilities = [
 
 const tools = ["Next.js", "React", "TypeScript", "Supabase", "Node.js", "GSAP", "Vercel", "IA generativa"];
 
-const suiteTabs = [
-  { label: "Landing pages", active: true, badge: "" },
-  { label: "Institucionais", active: false, badge: "Web" },
-  { label: "SaaS", active: false, badge: "Produto" },
-  { label: "E-commerce", active: false, badge: "" },
-];
-
 const suiteCapabilities = [
   { title: "Estratégia", description: "Objetivo, público e mensagem central definidos antes do layout.", active: true },
   { title: "Design", description: "Direção visual, hierarquia e experiência alinhadas à marca.", active: false },
@@ -148,15 +141,6 @@ export default function Home() {
       </section>
 
       <section className="intro section-light" data-showcase>
-        <div className="suite-tabs" aria-label="Áreas de atuação" data-pill-nav>
-          {suiteTabs.map((tab) => (
-            <span className={tab.active ? "active" : ""} key={tab.label}>
-              {tab.label}
-              {tab.badge && <b>{tab.badge}</b>}
-            </span>
-          ))}
-        </div>
-
         <div className="shell intro-suite" data-showcase-card>
           <div className="suite-copy">
             <h2>Sites completos, do briefing ao lançamento</h2>
