@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Derik Dev — Produtos digitais com presença",
   description:
     "Desenvolvedor fullstack especializado em sites, produtos SaaS e experiências digitais de ponta a ponta.",
+  icons: {
+    icon: "/imagens/portfolio/logo-dg.png",
+  },
 };
 
 export default function RootLayout({
