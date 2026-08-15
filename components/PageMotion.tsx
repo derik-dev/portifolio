@@ -188,5 +188,48 @@ export default function PageMotion() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    const scroll = document.getElementById('logos-scroll') as HTMLElement | null;
+    const prev = document.getElementById('logos-prev');
+    const next = document.getElementById('logos-next');
+    if (!scroll || !prev || !next) return;
+
+    const CARD_W = 280;
+    const COUNT = 7;
+    const SET_W = CARD_W * COUNT; // 1960 — width of one copy of the list
+
+    let pos = SET_W;
+    scroll.scrollLeft = pos;
+
+    const move = (dir: number) => {
+      pos += dir * CARD_W;
+      gsap.to(scroll, {
+        scrollLeft: pos,
+        duration: 0.55,
+        ease: 'power3.out',
+        overwrite: true,
+        onComplete: () => {
+          const sl = scroll.scrollLeft;
+          if (sl < SET_W) {
+            pos = sl + SET_W;
+            scroll.scrollLeft = pos;
+          } else if (sl >= SET_W * 2) {
+            pos = sl - SET_W;
+            scroll.scrollLeft = pos;
+          }
+        },
+      });
+    };
+
+    const onPrev = () => move(-1);
+    const onNext = () => move(1);
+    prev.addEventListener('click', onPrev);
+    next.addEventListener('click', onNext);
+    return () => {
+      prev.removeEventListener('click', onPrev);
+      next.removeEventListener('click', onNext);
+    };
+  }, []);
+
   return null;
 }

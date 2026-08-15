@@ -3,21 +3,6 @@ import PageMotion from "../components/PageMotion";
 
 const projects = [
   {
-    name: "Vero",
-    type: "E-commerce",
-    description: "Moda funcional com estética premium.",
-    image: "/imagens/ims-sites/img-site (13).png",
-    href: "https://loja-virtual-navy-eta.vercel.app/",
-    className: "project-featured",
-  },
-  {
-    name: "CodeXZ",
-    type: "Autoridade digital",
-    description: "Presença premium para marcas que precisam transmitir valor.",
-    image: "/imagens/ims-sites/img-site (10).png",
-    href: "https://codexz.com.br/",
-  },
-  {
     name: "NetPubli",
     type: "Landing page",
     description: "Estrutura de conversão para tráfego pago e captação.",
@@ -30,13 +15,6 @@ const projects = [
     description: "Página especializada para jornada de diagnóstico e agendamento.",
     image: "/imagens/ims-sites/img-site (12).png",
     href: "https://netpubli.com.br/meu-cpap",
-  },
-  {
-    name: "Rei do Martelete",
-    type: "E-commerce",
-    description: "Catálogo e conversão para locação de equipamentos.",
-    image: "/imagens/ims-sites/img-site.png",
-    href: "https://codexz.com.br/template",
   },
   {
     name: "Imparis Solutions",
@@ -52,6 +30,39 @@ const projects = [
     image: "/imagens/ims-sites/img-site (14).png",
     href: "https://e4dconsultoria.com.br/",
   },
+  {
+    name: "Editora Aslan",
+    type: "Site institucional",
+    description: "Presença digital para editora com catálogo e identidade de marca.",
+    image: "/imagens/ims-sites/imgsite.png",
+    href: "https://editoraaslan.com",
+  },
+  {
+    name: "Hipnose & Nutrição",
+    type: "Saúde",
+    description: "Página especializada para captação de pacientes e agendamento.",
+    image: "/imagens/ims-sites/imgsite (1).png",
+    href: "https://clinicadehipnoseenutricao.com",
+    objectPosition: "left top",
+  },
+  {
+    name: "Vero",
+    type: "E-commerce",
+    description: "Moda funcional com estética premium.",
+    image: "/imagens/ims-sites/img-site (13).png",
+    href: "https://loja-virtual-navy-eta.vercel.app/",
+    className: "project-featured",
+  },
+];
+
+const clients = [
+  { name: "Vero", logo: "/cases/logo.png", description: "E-commerce de moda funcional com estética premium e foco em conversão.", href: "https://loja-virtual-navy-eta.vercel.app/" },
+  { name: "NetPubli", logo: "/cases/logo (1).png", description: "Landing page estruturada para tráfego pago, captação e autoridade digital.", href: "https://codexz.com.br/netpubli" },
+  { name: "Centro CPAP", logo: "/cases/logo (2).png", description: "Página especializada para jornada de diagnóstico e agendamento de consultas.", href: "https://netpubli.com.br/meu-cpap" },
+  { name: "Imparis Solutions", logo: "/cases/logo (3).png", description: "Posicionamento digital completo para escalar negócios com estratégia.", href: "https://codexz.com.br/imparis" },
+  { name: "E4D Consultoria", logo: "/cases/logo (4).png", description: "Site institucional para gestão estratégica de clínicas e hospitais.", href: "https://e4dconsultoria.com.br/" },
+  { name: "Editora Aslan", logo: "/cases/logo (5).png", description: "Presença digital para editora com catálogo, identidade e autoridade de marca.", href: "https://editoraaslan.com" },
+  { name: "Hipnose & Nutrição", logo: "/cases/logo (6).png", description: "Página especializada em captação de pacientes e agendamento online.", href: "https://clinicadehipnoseenutricao.com" },
 ];
 
 const capabilities = [
@@ -98,7 +109,7 @@ export default function Home() {
 
       <header className="topbar">
         <a className="brand" href="#inicio" aria-label="Derik Dev, início">
-          <BrandLogo />
+          <img src="/imagens/portfolio/logo-dg.png" alt="DG logo" style={{ height: "48px", width: "auto", filter: "brightness(0) invert(1)" }} />
         </a>
         <nav className="nav-links" aria-label="Navegação principal">
           <a href="#projetos">Projetos</a>
@@ -111,26 +122,17 @@ export default function Home() {
       </header>
 
       <section className="hero" id="inicio" data-hero>
-        <img className="hero-image" data-hero-image src="/imagens/portfolio/hero-derik.png" alt="" />
+        <img className="hero-image" data-hero-image src="/imagens/portfolio/new-hero.png" alt="" />
         <div className="hero-shade" data-hero-shade />
         <div className="hero-content shell">
-          <div className="availability" data-hero-badge>
-            <i /> Disponível para novos projetos
-          </div>
-          <p className="eyebrow" data-reveal>
-            Fullstack developer · Product builder
-          </p>
+
+
           <h1 data-hero-title>
-            Produtos digitais
+            Criamos sites que
             <br />
-            com presença,
-            <br />
-            clareza e código.
+            geram resultados.
           </h1>
-          <p className="hero-copy" data-hero-copy>
-            Eu transformo ideias em experiências que parecem simples,
-            funcionam rápido e ajudam negócios a crescer.
-          </p>
+
           <div className="hero-actions" data-hero-actions>
             <a className="button button-light" href="#projetos">
               Ver projetos <Arrow />
@@ -140,20 +142,13 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="hero-services" aria-label="Especialidades" data-hero-services>
-          <span>Landing pages</span>
-          <span>Produtos SaaS</span>
-          <span>E-commerce</span>
-          <span className="active">Experiências web</span>
-          <span>Integrações com IA</span>
-        </div>
         <div className="hero-bottom" data-hero-bottom>
           <span>Três Rios · RJ · Brasil</span>
           <span>Projetando e construindo de ponta a ponta</span>
         </div>
       </section>
 
-      <section className="intro section-light" data-showcase>
+      <section className="intro" data-showcase>
         <div className="shell intro-suite" data-showcase-card>
           <div className="suite-copy">
             <h2>Sites completos, do briefing ao lançamento</h2>
@@ -200,7 +195,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="projects section-light" id="projetos">
+      <section className="projects" id="projetos">
         <div className="shell section-heading row-heading">
           <div data-reveal>
             <p className="section-kicker">Trabalhos selecionados</p>
@@ -228,7 +223,7 @@ export default function Home() {
               data-project-card
             >
               <div className="project-image">
-                <img src={project.image} alt={`Página inicial do projeto ${project.name}`} />
+                <img src={project.image} alt={`Página inicial do projeto ${project.name}`} style={project.objectPosition ? { objectPosition: project.objectPosition } : undefined} />
                 <div className="project-info" aria-hidden="true">
                   <span>{project.type}</span>
                   <h3>{project.name}</h3>
@@ -248,6 +243,27 @@ export default function Home() {
               </div>
             </a>
           ))}
+        </div>
+      </section>
+
+      <section className="logos-section">
+        <div className="shell logos-header">
+          <p className="logos-heading">Clientes que confiam no trabalho</p>
+          <div className="logos-arrows">
+            <button className="logos-arrow" id="logos-prev" aria-label="Anterior">←</button>
+            <button className="logos-arrow" id="logos-next" aria-label="Próximo">→</button>
+          </div>
+        </div>
+        <div className="logos-scroll-wrap" id="logos-scroll">
+          <div className="logos-grid">
+            {[...clients, ...clients, ...clients].map((client, i) => (
+              <div key={i} className="logo-card">
+                <img src={client.logo} alt={client.name} className="logo-img" />
+                <p className="logo-desc">{client.description}</p>
+                <a href={client.href} target="_blank" rel="noreferrer" className="logo-link">Ver projeto</a>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -297,7 +313,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about section-light" id="sobre">
+      <section className="about" id="sobre">
         <div className="shell about-grid">
           <div className="about-title" data-reveal>
             <p className="section-kicker">Sobre o Derik</p>
@@ -335,7 +351,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="faq section-light">
+      <section className="faq">
         <div className="shell faq-grid">
           <div data-reveal>
             <p className="section-kicker">Perguntas frequentes</p>
@@ -363,7 +379,7 @@ export default function Home() {
       </section>
 
       <section className="cta-section" id="contato" data-cta>
-        <img src="/imagens/portfolio/cta-derik.png" alt="" data-cta-image />
+        <img src="/imagens/portfolio/hero-black-hole.png" alt="" data-cta-image />
         <div className="cta-shade" />
         <div className="cta-content" data-cta-content>
           <p className="section-kicker">Seu próximo projeto pode começar aqui</p>
@@ -380,8 +396,8 @@ export default function Home() {
 
       <footer>
         <div className="shell footer-inner">
-          <a className="brand brand-dark" href="#inicio">
-            <BrandLogo tone="dark" />
+          <a href="#inicio" aria-label="Derik Dev, início">
+            <img src="/imagens/portfolio/logo-dg.png" alt="DG logo" style={{ height: "48px", width: "auto", filter: "brightness(0) invert(1)" }} />
           </a>
           <p>Produto, design e desenvolvimento para a web.</p>
           <div>
